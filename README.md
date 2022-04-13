@@ -39,7 +39,7 @@ Back in 1936 the Iris flower set was introduced by Fisher. This flower data rela
 2) Iris versicolour and
 3) Iris Virginica
 
-![C:\Users\Anna\Documents\GMIT\PANDS2022\Images] (C:\Users\Anna\Documents\GMIT\PANDS2022\Images\Three types iris.png)[2]
+INSERT IMAGE HERE!!!! [2]
 
 and it contains fifty types of each of the three classes above, one hundred and fifty in total.[3]
 
