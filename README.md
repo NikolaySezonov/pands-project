@@ -40,6 +40,7 @@ Back in 1936 the Iris flower set was introduced by Fisher. This flower data rela
 3) Iris Virginica
 
 INSERT IMAGE HERE!!!! [2]
+![ALT https://machinelearningsol.com/wp-content/uploads/2019/09/img1-1024x349.png ](https://machinelearningsol.com/wp-content/uploads/2019/09/img1-1024x349.png)
 
 and it contains fifty types of each of the three classes above, one hundred and fifty in total.[3]
 
