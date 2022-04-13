@@ -49,9 +49,13 @@ The first four attributes are the variations within each individual class, and t
 Those five attributes/columns names are as follows:
 
 I)      Sepal length         represented in cm
+
 II)     Sepal width          represented in cm
+
 III)    Petal length         represented in cm
+
 IV)     Petal width          represented in cm
+
 V)      Class variant name
 
 So, what is the difference between sepals and petals? 
