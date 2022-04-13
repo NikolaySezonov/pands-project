@@ -1,8 +1,8 @@
 # pands-project
 
-#### GMIT project for subject of Programming and Scripting 2022
-#### **********************************************************
-#### FAO: Mr. Andrew Beatty
+### GMIT project for subject of Programming and Scripting 2022
+### **********************************************************
+### FAO: Mr. Andrew Beatty
 
 Student Name        :      Nikolay Sezonov
 
