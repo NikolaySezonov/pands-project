@@ -35,14 +35,13 @@ Another important achievement by Fisher was origination of the concept of analys
 
 Back in 1936 the Iris flower set was introduced by Fisher. This flower data relates to the classification of three variant classes names of Iris flowers , namely:
 
-1) Iris setosa
-2) Iris versicolour and
+1) Iris Versicolour 
+2) Iris Setosa and
 3) Iris Virginica
 
-INSERT IMAGE HERE!!!! [2]
-![ALT https://machinelearningsol.com/wp-content/uploads/2019/09/img1-1024x349.png ](https://machinelearningsol.com/wp-content/uploads/2019/09/img1-1024x349.png)
+![ALT https://machinelearningsol.com/wp-content/uploads/2019/09/img1-1024x349.png ](https://machinelearningsol.com/wp-content/uploads/2019/09/img1-1024x349.png) [2]
 
-and it contains fifty types of each of the three classes above, one hundred and fifty in total.[3]
+and it contains fifty types of each of the three classes above, one hundred and fifty in total. [3]
 
 There are five columns in this data set table and each column is an attribute of the each sample.
 The first four attributes are the variations within each individual class, and the last attribute is the class itself. 
