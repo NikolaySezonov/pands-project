@@ -9,7 +9,7 @@
 
 # Submission date 16-Apr-22 as I have to submitted earlier :)
 
-# After conducting some research 4 modules that i most likely will use with this programme are as follows:
+# After conducting some research 2 modules that i most likely will use with this programme are as follows:
  
 import matplotlib.pyplot as plt
 import pandas as pd 
