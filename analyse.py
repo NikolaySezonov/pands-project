@@ -16,4 +16,11 @@ import pandas as pd
 
 # import matplotlib pyplot and pandasmodules abbreviated to plt and pd
 
-iris_data = pd.read_csv("Iris-data-set.csv") # here I am setting up a variable for use in the program
+iris_data = pd.read_csv("Iris-data-set.csv", header=None) 
+
+# here I am setting up a variable for use in the program
+
+iris_data.columns =["Sepal length (cm)","Sepal width (cm)","Petal length (cm)","Petal width (cm)","Species"]
+# Adding headers to attributes (columns); source: https://stackoverflow.com/a/28162530
+
+print(iris_data.head())
