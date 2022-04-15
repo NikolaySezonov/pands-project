@@ -125,6 +125,29 @@ All above are standard set of data investigations that I found across the web.
 
 [5] https://stats.stackexchange.com/questions/74776/            what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching
 
+### Links used and copied in the analyse.py program are from the following sources
+
+* http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html
+
+* https://stackoverflow.com/a/28162530
+
+* https://stackoverflow.com/questions/10200268/what-does-shape-do-in-for-i-in-rangey-shape0
+
+* https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.sample.html
+
+* https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html
+
+* https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.median.html
+
+* https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.DataFrame.plot.bar.html
+
+* https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html
+
+* https://stackoverflow.com/questions/12444716/how-do-i-set-the-figure-title-and-axes-labels-font-size-in-matplotlib
+
+* https://stackoverflow.com/questions/44383638/how-to-save-matplotlib-plot-with-the-same-file-name-as-its-filename-py
+
+* 
 
 
 

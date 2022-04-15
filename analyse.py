@@ -14,54 +14,55 @@
 import matplotlib.pyplot as plt
 import pandas as pd 
 
-# import matplotlib pyplot and pandasmodules abbreviated to plt and pd
+# Import matplotlib pyplot and pandasmodules abbreviated to plt and pd
 
 iris_data = pd.read_csv("Iris-data-set.csv", header=None) 
 
-# here I am setting up a variable for use in the program
+# Here I am setting up a variable for use in the program
 
 iris_data.columns =["Sepal length (cm)","Sepal width (cm)","Petal length (cm)","Petal width (cm)","Species"]
 # Adding headers to attributes (columns); source: https://stackoverflow.com/a/28162530
 
 
 
-print(' ') #use of space to make the output more user friendly
+print(' ') # Use of space to make the output more user - friendly
 
-print ("Investigations on Iris Dataset") #Title of program being run
+print ("Investigations on Iris Dataset") # Title of program being run
 
 print ("All Graphs within this program will be automatically saved in the folder for viewing")
 
 print(' ')
 
-print('Unique Species Names') # this programme is being run to allow the user to indentify the three types of iris flower in the dataset
+print('Unique Species Names') # This programme is being run to allow the user to indentify 
+# the three types of iris flower available in the dataset
 
 print(' ')
 
-print(iris_data['Species'].unique()) #prints out the three types of iris species captured
+print(iris_data['Species'].unique()) # Prints out the three types of iris species captured
 
 print(' ')
 print('------------------------------------------------------------------------------------------------------------')
 print(' ')
-# the above block is used as a spacing tool for ease of usability and readability for the users
+# The above block is used as a spacing tool 
 
 print('Shape of the Iris Dataset')# Provides an overview of the data captured and potential outputs 
 # of further investigation Sourced: https://stackoverflow.com/questions/10200268/what-does-shape-do-in-for-i-in-rangey-shape0
 
 print(' ')
 
-print(iris_data.shape) #Prints the number of data entries in the data set along with number of the attributes
+print(iris_data.shape) # Prints the number of data entries in the data set along with number of the attributes
 #.shape is a module from the pandas package
 
 print(' ')
 print('------------------------------------------------------------------------------------------------------------')
 print(' ')
 
-print ('Sample of Data contained in the Iris Dataset of all 150 records')# random sample of the dataset. 
+print ('Sample of Data contained in the Iris Dataset of all 150 records')# Random sample of the dataset. 
 # source: https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.sample.html
 print(' ')
-print (iris_data.sample (5)) #Prints 5 random complete data entries from the data set
+print (iris_data.sample (5)) # Prints five random complete data entries from the data set
 x = iris_data.sample(5)
-#.sample is a module from the pandas package to enable to user to see a random seletion of data 
+#.sample is a module from the pandas package to enable user to see a random selection of data 
 # from the dataset
 
 print(' ')
@@ -72,18 +73,19 @@ print ("Summary of Key Statistics from Iris Dataset of all 150 records")
 # generates statistical analysis of the features of the measures of centre points and 
 # distribution of values 
 # source:https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html
+
 print(' ')
 print (iris_data.describe()) 
 # Prints in tabular form key statistics from the data.
-# provide high level analysis for the user
+# Provide high level analysis for the user
 #.describe - a module that outputs the key statistics of the dataset
-# output sets the scene for following investigations that are more indepth and particular to each species
+# Output sets the scene for following investigations that are more indepth and particular to each species
 print(' ')
 print('------------------------------------------------------------------------------------------------------------')
 print(' ')
 
 print('Median of attributes from Iris Dataset of all 150 records') 
-# this is an additional analysis conducted on the centre points of the data 
+# This is an additional analysis conducted on the centre points of the data 
 # source: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.median.html
 
 print(' ')
@@ -93,14 +95,15 @@ print(' ')
 print('------------------------------------------------------------------------------------------------------------')
 print(' ')
 
-print ('Minimum, Maximum, Mean and Median of each attribute for each species in dataset') #the following analysis looks at the maximum, minimum, mean and median of each of the numerical categories
+print ('Minimum, Maximum, Mean and Median of each attribute for each species in dataset') 
+# The following analysis looks at the maximum, minimum, mean and median of each of the numerical categories
 print(' ')
-#all modules are from the pandas package
+# all modules are from the pandas package
 
 print('Min ') 
 # Extracts the minimum values of each of the attributes 
 print(iris_data.groupby('Species').min()) # Prints in tabular form and also groups the data by the three species
-#Graph variables set up for bar chart to be displayed and saved into the repository
+# Graph variables set up for bar chart to be displayed and saved into the repository
 
 iris_min = iris_data.groupby('Species').min()
 iris_min.plot.bar() 
@@ -108,24 +111,24 @@ iris_min.plot.bar()
 # Source: https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.DataFrame.plot.bar.html
 
 plt.gcf().subplots_adjust(bottom=0.15) 
-# adjusting the table to enable table to be fully seen in the window. 
+# Adjusting the table to enable table to be fully seen in the window. 
 # Source: https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html
 
 plt.xlabel('Iris Species', fontsize=14, weight='normal')
-# applying text and font to the table on the x axis. 
+# Applying text and font to the table on the x axis. 
 # Source: https://stackoverflow.com/questions/12444716/how-do-i-set-the-figure-title-and-axes-labels-font-size-in-matplotlib
 
 plt.ylabel("Min Values", fontsize=14, weight='normal')
-# applying text and font to the table on the y axis
+# Applying text and font to the table on the y axis
 
 title = "Min Value of Attributes of each of Iris Species" 
 # Applying a title to the dataset
 
 filename = "Min Value of Attributes of each of Iris Species.jpg" 
-# the name of the file to which the graph will be saved to
+# The name of the file to which the graph will be saved to
 
 plt.title(title, fontsize=14, weight='bold') 
-#apply text and font detail to the title
+# Apply text and font detail to the title
 
 plt.gcf().subplots_adjust(bottom=0.3)
 # plt.show()
@@ -134,7 +137,7 @@ plt.gcf().subplots_adjust(bottom=0.3)
 filename = "Min of Attributes of each of Iris Species.jpg"
 
 plt.savefig(filename) 
-# file will be saved and then will close to allow continuing of the program execution. 
+# File will be saved and then will close to allow continuing of the program execution. 
 # Source:https://stackoverflow.com/questions/44383638/how-to-save-matplotlib-plot-with-the-same-file-name-as-its-filename-py
 
 plt.close()
@@ -147,7 +150,7 @@ print(iris_data.groupby('Species').max())
 
 # The sources and explaination are the same for all tables in this group
 
-#Graph variables set up for bar chart to be displayed and saved into the repository
+# Graph variables set up for bar chart to be displayed and saved into the repository
 
 iris_max = iris_data.groupby('Species').max()
 iris_max.plot.bar()
@@ -159,16 +162,19 @@ plt.title(title, fontsize=14, weight='bold')
 plt.gcf().subplots_adjust(bottom=0.3)
 #plt.show()
 #plt.close()
+
 filename = "Max of Attributes of each of Iris Species.jpg"
 plt.savefig(filename)
 plt.close()
 print(' ')
 
-print('Mean')  # Extracts the maximum values of each of the attributes 
+
+print('Mean')  # Extracts the mean values of each of the attributes 
 print(iris_data.groupby('Species').mean()) # Prints in tabular form
 print(' ')
 
-#Graph variables set up for bar chart to be displayed and saved into the repository
+# Graph variables set up for bar chart to be displayed and saved into the repository
+
 iris_mean = iris_data.groupby('Species').mean()
 iris_mean.plot.bar()
 plt.gcf().subplots_adjust(bottom=0.15)
@@ -178,10 +184,9 @@ title = "Mean Value of Attributes of each of Iris Species"
 filename = "Mean Value of Attributes of each of Iris Species.jpg"
 plt.title(title, fontsize=14, weight='bold')
 plt.gcf().subplots_adjust(bottom=0.3)
-#plt.show()
-#plt.close()
 
-filename = "Mean of Attributes in Iris dataset.jpg"
+
+filename = "Mean of Attributes of each of Iris Species.jpg"
 plt.savefig(filename)
 plt.close()
 print(' ')
@@ -193,6 +198,7 @@ print(' ')
 
 
 #Graph variables set up for bar chart to be displayed and saved into the repository
+
 iris_median = iris_data.groupby('Species').median()
 iris_median.plot.bar()
 plt.gcf().subplots_adjust(bottom=0.15)
@@ -202,9 +208,20 @@ title = "Median Value of Attributes of each of Iris Species"
 filename = "Median Value of Attributes of each of Iris Species.jpg"
 plt.title(title, fontsize=26, weight='bold')
 plt.gcf().subplots_adjust(bottom=0.3)
-#plt.show()
+
+
 filename = "Median of Attributes of each of Iris Species.jpg"
 plt.savefig(filename)
 plt.close()
 print(' ')
 
+
+print('This is a summary of all species and their attributes') #This program aims to output all the summary data for the three species
+for i in iris_data['Species'].unique(): #while the .unique module is running, the program will gather data for each of the unique values and output a summary table
+    build_list = iris_data['Species'] == i # this for loop will run for a long as there are new data being generated from the Species column.
+    species = iris_data[build_list] # the module build list, creates a table for each species annd outputs the summary data as per.describe module
+    print('\n', i, '\n', species.describe(), '\n') 
+    
+    # Source: http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html
+
+    
