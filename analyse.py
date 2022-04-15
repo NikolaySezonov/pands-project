@@ -24,6 +24,10 @@ iris_data = pd.read_csv("Iris-data-set.csv", header=None)
 
 # Here I am setting up a variable for use in the program
 
+
+sns.set(style="whitegrid", rc={'figure.figsize':(10,6)}) 
+#sns.set is helping to set up the display box that you will be showing your graph in.
+
 iris_data.columns =["Sepal length (cm)","Sepal width (cm)","Petal length (cm)","Petal width (cm)","Species"]
 # Adding headers to attributes (columns); source: https://stackoverflow.com/a/28162530
 
@@ -246,12 +250,12 @@ print(' ')
 print ("All Graphs within this program will be automatically saved in the folder for viewing")
 print(' ')
 title = "Comparison of the Distributions of Sepal Length"
-sns.boxplot(x="Species", y="sepal length", data=iris_data) 
+sns.boxplot(x="Species", y="Sepal length (cm)", data=iris_data) 
 # the seaborn boxplot function enables comparison between the distributions of each attribute. 
 # Source: https://seaborn.pydata.org/generated/seaborn.boxplot.html
 
 plt.title(title, fontsize=14, weight='bold') 
-# Sources: https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
+# Source: https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
 
 plt.gcf().subplots_adjust(bottom=0.3)
 plt.xlabel('Species', fontsize=14, weight='normal')
@@ -263,7 +267,7 @@ plt.close()
 print(' ')
 
 title="Comparison of the Distributions of Sepal Width"
-sns.boxplot(x="Species", y="sepal width", data=iris_data)
+sns.boxplot(x="Species", y="Sepal width (cm)", data=iris_data)
 plt.title(title, fontsize=14, weight='bold')
 plt.gcf().subplots_adjust(bottom=0.3)
 plt.xlabel('Species', fontsize=14, weight='normal')
@@ -275,7 +279,7 @@ plt.close()
 print(' ')
 
 title="Comparison of the Distributions of Petal Length"
-sns.boxplot(x="Species", y="petal length", data=iris_data)
+sns.boxplot(x="Species", y="Petal length (cm)", data=iris_data)
 plt.title(title, fontsize=14, weight='bold')
 plt.gcf().subplots_adjust(bottom=0.3)
 plt.xlabel('Species', fontsize=14, weight='normal')
@@ -286,7 +290,7 @@ plt.close()
 print(' ')
 
 title="Comparison of the distributions of Petal Width"
-sns.boxplot(x="Species", y="petal width", data=iris_data)
+sns.boxplot(x="Species", y="Petal width (cm)", data=iris_data)
 plt.title(title, fontsize=14, weight='bold')
 plt.gcf().subplots_adjust(bottom=0.3)
 plt.xlabel('Species', fontsize=14, weight='normal')
@@ -301,23 +305,23 @@ print(' ')
 
 print ("Correlation between the Sepal Characteristics and the Petal Characteristics to examine prediction factors")
 print ("All Graphs within this program will be automatically saved in the folder for viewing")
-print('Correlation OF ALL')
+print('Correlation of all')
 print(iris_data.iloc[0:].corr())
 
-#Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
+# Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
 
 plt.figure() 
-#Source:https://www.kaggle.com/sridharcr/data-analysis-iris-dataset
+# Source: https://www.kaggle.com/sridharcr/data-analysis-iris-dataset
 fig,ax=plt.subplots(1,2,figsize=(17, 9)) 
 
 # Source: https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 
-iris_data.plot(x="sepal length",y="sepal width",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="Sepal",color='r')
-iris_data.plot(x="petal length",y="petal width",kind="scatter",ax=ax[1],sharex=False,sharey=False,label="Petal",color='b')
-ax[0].set(title='Sepal comparasion ', ylabel='Sepal Width')
-ax[1].set(title='Petal Comparasion',  ylabel='Petal Width')
-ax[0].set(xlabel='Sepal Length')
-ax[1].set(xlabel='Petal Length')
+iris_data.plot(x="Sepal length (cm)",y="Sepal width (cm)",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="Sepal",color='r')
+iris_data.plot(x="Petal length (cm)",y="Petal width (cm)",kind="scatter",ax=ax[1],sharex=False,sharey=False,label="Petal",color='b')
+ax[0].set(title='Sepal Comparasion ', ylabel='Sepal width (cm)')
+ax[1].set(title='Petal Comparasion',  ylabel='Petal width (cm)')
+ax[0].set(xlabel='Sepal Length (cm)')
+ax[1].set(xlabel='Petal Length (cm)')
 ax[0].legend()
 ax[1].legend()
 plt.gcf().subplots_adjust(bottom=0.3)

@@ -151,6 +151,8 @@ All above are standard set of data investigations that I found across the web.
 
 * https://seaborn.pydata.org/generated/seaborn.boxplot.html
 
+* https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
+
 * https://www.kaggle.com/sridharcr/data-analysis-iris-dataset
 
 * https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
