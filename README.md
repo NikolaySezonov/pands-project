@@ -111,7 +111,27 @@ All above are standard set of data investigations that I found across the web.
 
 ### Summary of findings of the Iris Data Set
 
+The project tried to examined the key statistical attributes for the Iris flower dataset, namely the maximum, medium and standard deviation for all the data and also the individual species.
 
+If these available, it would be great to explore any distinctions between attributes and species which could be used as a predictor indicators when you try to identify the different types of species.
+
+To investigate this further, the max and min functions were used to identify the flowers associated with the data, allowing us to assume that sertosa type will be among the smallest data entries collected and virginica type will be among the largest data entries collected. 
+
+It is well documented that the iris-sertosa and iris-virginica has more distinguishable attributes than the iris-versicolor [5].
+
+The mean and median of the attributes are also important in exploing predictors as they were gathered as calculating the centre points. The central points for the sepal length and sepal width are less than 0.1, suggesting the mean and median are quite similiar.
+
+The difference between the mean and median scores are more visible in the petal length and petal width, > 0.5. This may suggests that the data on petal lengths and petal widths could be used as an indication for the entry species.
+
+To further visualise this data, the scatter plot " Corellation between Petal Length vs Petal Width & Sepal Length vs Sepal width" was created. This scatter plot demonstrates the spread of sepal sizes and petal sizes across the whole data set.
+
+It is clear from the data set that there is a very high degree of correlation between the petal length and the petal width in the Iris species. Whereas in the sepal measurements there is no corellation observed at all and data is all over the place.
+
+To me it's another proof that the nature is an absolute architect when it's come to proportions and measurements. That the reason why famous Antoni Gaudi always used nature in his work as he knew how to adapt the language of nature to the structural forms of architecture. 
+
+Because petals are important when it comes to attract insects as a pollinators, it have to be in sertain proportions and colour so to be easility recognised / destinguished against other species.
+
+I hope, that same as bee, I could collect enough of pollen = ["new knowledge"] to successfully transform and use it as a honey =["new skills"]  :)
 
 ### References
 
@@ -124,6 +144,8 @@ All above are standard set of data investigations that I found across the web.
 [4] https://www.britannica.com/science/flower#ref49314
 
 [5] https://stats.stackexchange.com/questions/74776/            what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching
+
+[6] http://patrickhoey.com/downloads/Computer_Science/03_Patrick_Hoey_Data_Visualization_Dataset_paper.pdf
 
 ### Links used and copied in the analyse.py program are from the following sources
 
