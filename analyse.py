@@ -316,10 +316,10 @@ fig,ax=plt.subplots(1,2,figsize=(17, 9))
 
 # Source: https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 
-iris_data.plot(x="Sepal length (cm)",y="Sepal width (cm)",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="Sepal",color='r')
+iris_data.plot(x="Sepal length (cm)",y="Sepal width (cm)",kind="scatter",ax=ax[1],sharex=False,sharey=False,label="Sepal",color='r')
 iris_data.plot(x="Petal length (cm)",y="Petal width (cm)",kind="scatter",ax=ax[1],sharex=False,sharey=False,label="Petal",color='b')
-ax[0].set(title='Sepal Comparasion ', ylabel='Sepal width (cm)')
-ax[1].set(title='Petal Comparasion',  ylabel='Petal width (cm)')
+ax[0].set(title='Sepal Comparison ', ylabel='Sepal width (cm)')
+ax[1].set(title='Petal Comparison ',  ylabel='Petal width (cm)')
 ax[0].set(xlabel='Sepal Length (cm)')
 ax[1].set(xlabel='Petal Length (cm)')
 ax[0].legend()
