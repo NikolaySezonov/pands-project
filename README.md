@@ -72,7 +72,7 @@ I knew from the very start, that I would really struggle with the whole coding t
 
 Apologies, went off slightly from the topic... Ok, where are we? Oh, yes the investigations...
 
-Different observations on-line shows [5] the data in Fisher's Iris data set [1] is good quality and what is mmost important is based on real life data. The quantity of data is large enough to work with.
+Different observations on-line shows [5] the data in Fisher's Iris data set [1] is good quality and what is most important is based on real life data. The quantity of data is large enough to work with.
 It is also numerical, but is probably not enough to easily experimented with. But for teaching purposes is great.
 
 During the copying of the data I noticed that the test print of the data showed 149 rows and that the first row of the data was used for the data header. 
@@ -147,10 +147,13 @@ All above are standard set of data investigations that I found across the web.
 
 * https://stackoverflow.com/questions/44383638/how-to-save-matplotlib-plot-with-the-same-file-name-as-its-filename-py
 
-* 
+* http://cmdlinetips.com/2019/02/how-to-make-histogram-in-python-with-pandas-and-seaborn/
 
+* https://seaborn.pydata.org/generated/seaborn.boxplot.html
 
+* https://www.kaggle.com/sridharcr/data-analysis-iris-dataset
 
+* https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 
 
 

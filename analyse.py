@@ -13,8 +13,12 @@
  
 import matplotlib.pyplot as plt
 import pandas as pd 
+import seaborn as sns
 
-# Import matplotlib pyplot and pandasmodules abbreviated to plt and pd
+# Import matplotlib pyplot, pandasmodules and seaborn abbreviated to plt, pd and sns
+
+# Code for plotting Histograms using seaborn 
+# Source:http://cmdlinetips.com/2019/02/how-to-make-histogram-in-python-with-pandas-and-seaborn/
 
 iris_data = pd.read_csv("Iris-data-set.csv", header=None) 
 
@@ -216,12 +220,107 @@ plt.close()
 print(' ')
 
 
-print('This is a summary of all species and their attributes') #This program aims to output all the summary data for the three species
-for i in iris_data['Species'].unique(): #while the .unique module is running, the program will gather data for each of the unique values and output a summary table
-    build_list = iris_data['Species'] == i # this for loop will run for a long as there are new data being generated from the Species column.
-    species = iris_data[build_list] # the module build list, creates a table for each species annd outputs the summary data as per.describe module
+print('This is a summary of all species and their attributes') #This program aims to output all 
+# the summary data for the three species
+for i in iris_data['Species'].unique(): 
+# While the .unique module is running, the program will gather data for each of 
+# the unique values and output a summary table
+
+    build_list = iris_data['Species'] == i 
+    # This for loop will run for a long as there are new data being generated from the Species column.
+
+    species = iris_data[build_list] # the module build list, creates a table for each species and outputs 
+    # the summary data as per.describe module
+
     print('\n', i, '\n', species.describe(), '\n') 
     
     # Source: http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html
 
-    
+
+print(' ')
+print('------------------------------------------------------------------------------------------------------------')
+print(' ')
+
+print ("Distributions of Each Attributes")
+print(' ')
+print ("All Graphs within this program will be automatically saved in the folder for viewing")
+print(' ')
+title = "Comparison of the Distributions of Sepal Length"
+sns.boxplot(x="Species", y="sepal length", data=iris_data) 
+# the seaborn boxplot function enables comparison between the distributions of each attribute. 
+# Source: https://seaborn.pydata.org/generated/seaborn.boxplot.html
+
+plt.title(title, fontsize=14, weight='bold') 
+# Sources: https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
+
+plt.gcf().subplots_adjust(bottom=0.3)
+plt.xlabel('Species', fontsize=14, weight='normal')
+plt.ylabel("Sepal Length", fontsize=14, weight='normal')
+
+filename = "Comparison of the Distributions of Sepal Length.jpg"
+plt.savefig(filename)
+plt.close()
+print(' ')
+
+title="Comparison of the Distributions of Sepal Width"
+sns.boxplot(x="Species", y="sepal width", data=iris_data)
+plt.title(title, fontsize=14, weight='bold')
+plt.gcf().subplots_adjust(bottom=0.3)
+plt.xlabel('Species', fontsize=14, weight='normal')
+plt.ylabel("Width", fontsize=14, weight='normal')
+
+filename = "Comparison of the Distributions of Sepal Width.jpg"
+plt.savefig(filename)
+plt.close()
+print(' ')
+
+title="Comparison of the Distributions of Petal Length"
+sns.boxplot(x="Species", y="petal length", data=iris_data)
+plt.title(title, fontsize=14, weight='bold')
+plt.gcf().subplots_adjust(bottom=0.3)
+plt.xlabel('Species', fontsize=14, weight='normal')
+plt.ylabel("Petal Length", fontsize=14, weight='normal')
+filename = "Comparison of the Distributions of Petal Length.jpg"
+plt.savefig(filename)
+plt.close()
+print(' ')
+
+title="Comparison of the distributions of Petal Width"
+sns.boxplot(x="Species", y="petal width", data=iris_data)
+plt.title(title, fontsize=14, weight='bold')
+plt.gcf().subplots_adjust(bottom=0.3)
+plt.xlabel('Species', fontsize=14, weight='normal')
+plt.ylabel("Petal Width", fontsize=14, weight='normal')
+filename = "Comparison of the Distributions of Petal Width.jpg"
+plt.savefig(filename)
+plt.close()
+
+print(' ')
+print('------------------------------------------------------------------------------------------------------------')
+print(' ')
+
+print ("Correlation between the Sepal Characteristics and the Petal Characteristics to examine prediction factors")
+print ("All Graphs within this program will be automatically saved in the folder for viewing")
+print('Correlation OF ALL')
+print(iris_data.iloc[0:].corr())
+
+#Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
+
+plt.figure() 
+#Source:https://www.kaggle.com/sridharcr/data-analysis-iris-dataset
+fig,ax=plt.subplots(1,2,figsize=(17, 9)) 
+
+# Source: https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+
+iris_data.plot(x="sepal length",y="sepal width",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="Sepal",color='r')
+iris_data.plot(x="petal length",y="petal width",kind="scatter",ax=ax[1],sharex=False,sharey=False,label="Petal",color='b')
+ax[0].set(title='Sepal comparasion ', ylabel='Sepal Width')
+ax[1].set(title='Petal Comparasion',  ylabel='Petal Width')
+ax[0].set(xlabel='Sepal Length')
+ax[1].set(xlabel='Petal Length')
+ax[0].legend()
+ax[1].legend()
+plt.gcf().subplots_adjust(bottom=0.3)
+filename = "Corellation between Petal Length vs Petal Width & Sepal Length vs Sepal width.jpg"
+plt.savefig(filename)
+plt.close()
