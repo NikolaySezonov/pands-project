@@ -81,7 +81,7 @@ I've changed that by running the following command and the issue was resolved
 iris_data.columns =["Sepal length (cm)","Sepal width (cm)","Petal length (cm)","Petal width (cm)","Species"]
 
 Then for the rest of the work I reviewed the key attributes of the data using the shape function. 
-The output graphs from the program code can be found at the end.
+The output graphs from the program code can be found at the repository as the separate files.
 
 1. Species Name:
 
@@ -178,6 +178,3 @@ I hope, that same as bee, I could collect enough of pollen = ["new knowledge"] t
 * https://www.kaggle.com/sridharcr/data-analysis-iris-dataset
 
 * https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
-
-
-
